@@ -1,0 +1,20 @@
+/*
+colors:
+1. FFFFFF - White
+2. 353535 - Graphite
+3. D2D7DF - Pale State
+*/
+
+.banner {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  background-color: #D2D7DF;
+}
+
+.btn {
+  width: 10%;
+  height: 80%;
+  background-color: white;
+  
+}
