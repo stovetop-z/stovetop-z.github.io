@@ -38,8 +38,91 @@ html, body {
   width: 80vw;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-radius: 10px;
+  border-radius: 1rem;
   background-color: #6B6570;
+}
+
+.skills-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 70vw;
+
+  background-color: #1a090d5d;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease-in-out;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.language {
+  border: 0;
+  height: fit-content;
+  border-radius: 50%;
+  transition: transform 0.25s ease-in-out;
+}
+
+.techList {
+  font-size: 40%;
+  width: 80vw;
+}
+
+.techKnowledgeList {
+  margin-left: -4rem;
+}
+
+.imgLang {
+  height:5vw;
+}
+
+.language:hover {
+  transform: translateY(-1rem);
+}
+
+.workCard {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: #6B6570;
+  background-color: #1a090d34;
+  border-radius: 1rem;
+  padding-left: 1rem;
+
+  padding-top: -2rem;
+}
+
+.workTitle {
+  font-size: 1.5rem;
+  margin-bottom: -2rem;
+}
+
+.workCo {
+  font-size: 1rem;
+  margin-bottom: -2rem;
+}
+
+.workTools {
+  font-size: 1rem;
+  margin-bottom: -0.5rem;
+}
+
+.workDesc {
+  font-size: 1rem;
+  border-style: solid;
+  border-radius: 1rem;
+  background-color: #6B6570;
+  border-color: #6B6570;
+  
 }
 
 .std-view {
@@ -54,14 +137,16 @@ html, body {
 .btn {
   color: #1A090D;
 
-  border: 2px;
+  border-style: solid;
+  border-color: #58535c3c;
+
   min-height: 80%;
   width:fit-content;
   min-width: 3rem;
   background-color: #6B6570;
   font-size: 1rem;
   margin-right: 1%;
-  border-radius: 10px;
+  border-radius: 1rem;
 
   transition: transform 0.5s ease-in-out;
 }
@@ -69,6 +154,7 @@ html, body {
 .btn:hover {
   background-color: #A8BA9A;
   transform: scale(1.2);
+  z-index: 1000;
 }
 
 .page-content {
@@ -109,7 +195,13 @@ html, body {
   transition: transform 0.5s ease-in-out;
 }
 
-.card:hover .page-content {
+.card:hover .page-content { 
+  height: fit-content;
+  opacity: 1;
+}
+
+
+.card:hover .skills-banner { 
   height: fit-content;
   opacity: 1;
 }
@@ -137,6 +229,16 @@ ul {
   padding-left: 5rem;
   padding-right: 5rem;
 }
+
+li {
+  transition: transform 0.25s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.05);
+  color: #F9ADA0;
+}
+
 
 p {
   color: white;
@@ -185,6 +287,11 @@ p {
 
 h4 {
   color: white;
+}
+
+h5 {
+  color: white;
+  margin-bottom: 0;
 }
 
 footer {
