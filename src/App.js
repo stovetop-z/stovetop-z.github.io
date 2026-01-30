@@ -1,7 +1,13 @@
 import './App.css';
 import me from './me.jpg'
+import fam_wo_isabella from './family_wo_isabella.jpg'
+import mama_kids from './mama_el_bel.jpg'
 
 import {useState} from 'react';
+
+function goTo(str) {
+    window.open(`https://${str}`, '_blank');
+  }
 
 function App() {
 
@@ -15,9 +21,10 @@ function App() {
         <Button name="btn" sym="About" onClick={() => setView("About")} />
       </div>
       <div className="std-view"> 
-        {view == "Home" && <Home />}
-        {view == "Projects" && <Projects />}
-        {view == "About" && <About />}
+        <Card title="Steven Zinn" subtitle='          Computer science masters student with experience in advanced machine learning projects
+' img={me} alt="Steven Zinn" img_class='me' />
+        <Card title="Projects" subtitle='click to see my projects on github'/>
+        <Card title="About Me" subtitle="" img={fam_wo_isabella} alt="Family" img_class='imgNoBella'/>
       </div>
       <footer>
         steven zinn's portfolio website
@@ -26,23 +33,23 @@ function App() {
   );
 }
 
-function Home() {
-  return (
-    <Card title="Steven Zinn" img={me} alt="Steven Zinn" img_class="me" />
-  );
-}
-
 function Projects() {
   return (
-    <Card title="My Projects" />
+    <>
+      <div className='project-banner'>
+        <Button name="btn" sym="Cenote" onClick={() => goTo("github.com/stovetop-z/Cenote")} />
+        <Button name="btn" sym="Tremor" onClick={() => goTo("github.com/stovetop-z/SensitivityAnalysis")} />
+        <Button name="btn" sym="Movie Recommender" onClick={() => goTo("github.com/stovetop-z/flindr")} />
+        <Button name="btn" sym="Deep Learning Course" onClick={() => goTo("github.com/stovetop-z/Deep-Learning")} />
+      </div>
+    </>
   );
 }
 
 function About() {
   return (
     <>
-      <Card title="About Me" />
-      <div className='page-content'>
+    <div className='page-content'>
         <h4>An Autobiography</h4>
         <p>
           I grew up primarily in beautiful San Jose, California with a short stint in Houston, Texas. 
@@ -80,15 +87,21 @@ function About() {
   );
 }
 
-function Card({title, img = "None", alt = "None", img_class = "None"}) {
+function Card({title, subtitle = "None", img = "None", alt = "None", img_class = "None"}) {
   return (
     <>
       <div className="card">
-        {img != "None" && <img src={img} alt={alt} className={img_class} />}
+        <div className="images">
+          {img != "None" && <img src={img} alt={alt} className={img_class} />}
+          {alt == "Family" && <img src={mama_kids} alt="Mama and kids" className='imgMamaKids' />}
+        </div>
         <h3 className='card-title'>{title}</h3>
         <p className="card-p">
-          Computer science masters student with experience in advanced machine learning projects
+          {subtitle}
         </p>
+
+        {title == "Projects" && <Projects />}
+        {title == "About Me" && <About />}
       </div>
     </>
   );
