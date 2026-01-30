@@ -1,18 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.f591376f.css",
-    "main.js": "/static/js/main.d7687957.js",
+    "main.css": "/static/css/main.e87abebd.css",
+    "main.js": "/static/js/main.4f87dc5d.js",
     "static/js/453.eaf3016b.chunk.js": "/static/js/453.eaf3016b.chunk.js",
     "static/media/mama_el_bel.jpg": "/static/media/mama_el_bel.b479a74d0d7b1ba6b9c2.jpg",
     "static/media/family_wo_isabella.jpg": "/static/media/family_wo_isabella.8199801435ab5df51a6d.jpg",
     "static/media/me.jpg": "/static/media/me.3aa8515bf494b9ede0da.jpg",
+    "static/media/Matplotlib.svg": "/static/media/Matplotlib.80c8bebb1dce68dc12580ccab5a9c19d.svg",
+    "static/media/scikitlearn.svg": "/static/media/scikitlearn.73b2a863dc9eea5d16c9c271fc70605f.svg",
+    "static/media/java.svg": "/static/media/java.3f07ed8db7bcb55da497b664422bf80f.svg",
+    "static/media/lua.svg": "/static/media/lua.1c11780a2aecd99e6b3a42124f2e7b67.svg",
+    "static/media/mysql.svg": "/static/media/mysql.1957fab3610b78c02010dab864c2d6b8.svg",
+    "static/media/react.svg": "/static/media/react.8e63d418a6421cc2662e234ac8af7313.svg",
+    "static/media/matlab.svg": "/static/media/matlab.44de306ca4279f7043d62f0389b2a161.svg",
+    "static/media/py.svg": "/static/media/py.e146c98dc5517bd9c7e63d6f63a6a1df.svg",
+    "static/media/ubuntu.svg": "/static/media/ubuntu.582ad9871dacc0770a90c48262877690.svg",
+    "static/media/numpy.svg": "/static/media/numpy.772f5d33d4f41c510ae4a91a02552201.svg",
+    "static/media/cplusplus.svg": "/static/media/cplusplus.1b61d12f1e13619f72f915b0e77f83b3.svg",
     "index.html": "/index.html",
-    "main.f591376f.css.map": "/static/css/main.f591376f.css.map",
-    "main.d7687957.js.map": "/static/js/main.d7687957.js.map",
+    "static/media/pytorch.svg": "/static/media/pytorch.e64d02bdfe5507b5c8ec2ea495753d36.svg",
+    "static/media/fastapi.svg": "/static/media/fastapi.b3faf728b139611af33ebcee76bbd23c.svg",
+    "static/media/pandas.svg": "/static/media/pandas.26ff1c0502d192cd5b4766b6a13d643c.svg",
+    "main.e87abebd.css.map": "/static/css/main.e87abebd.css.map",
+    "main.4f87dc5d.js.map": "/static/js/main.4f87dc5d.js.map",
     "453.eaf3016b.chunk.js.map": "/static/js/453.eaf3016b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f591376f.css",
-    "static/js/main.d7687957.js"
+    "static/css/main.e87abebd.css",
+    "static/js/main.4f87dc5d.js"
   ]
 }
