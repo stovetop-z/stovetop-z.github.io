@@ -8,10 +8,20 @@ colors:
 5. 1A090D - Coffee Bean
 */
 
+:root {
+  --bck-color: #1B211A;
+  --subtitle-color: #1b211ab7;
+  --banner-color: #628141dc;
+  --border-color: #628141; 
+  --btn-color: #628141;
+  --btn-font-color: white;
+  --accent-color: #EBD5AB;
+}
+
 html, body {
   font-family: "Lucida Monospace";
-  background-color: #1A090D;
-  color: #1A090D;
+  background-color: var(--bck-color);
+  color: white;
 }
 
 .page {
@@ -25,6 +35,7 @@ html, body {
 
 .banner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -34,12 +45,19 @@ html, body {
 
   position: sticky;
 
-  height: 3rem;
-  width: 80vw;
+  gap: 0.5rem;
+
+  height: fit-content;
+  width: fit-content;
   margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  background-color: #6B6570;
+  padding: 0.25rem;
+  background-color: var(--banner-color);
+  
+  .btn {
+    border: none;
+  }
 }
 
 .skills-banner {
@@ -49,7 +67,7 @@ html, body {
 
   width: 70vw;
 
-  background-color: #1a090d5d;
+  background-color: var(--banner-color);
   border-radius: 1rem;
   padding: 1rem;
 
@@ -93,12 +111,14 @@ html, body {
   display: flex;
   flex-direction: column;
   border-style: solid;
-  border-color: #6B6570;
-  background-color: #1a090d34;
+  border-color: var(--border-color);
+  background-color: var(--banner-color);
   border-radius: 1rem;
   padding-left: 1rem;
+  padding-top: -20vh;
 
-  padding-top: -2rem;
+  height: fit-content;
+  width: 96%;
 }
 
 .workTitle {
@@ -109,20 +129,41 @@ html, body {
 .workCo {
   font-size: 1rem;
   margin-bottom: -2rem;
+  transition: transform 0.25s ease-in-out;
 }
 
 .workTools {
   font-size: 1rem;
   margin-bottom: -0.5rem;
+  transition: transform 0.25s ease-in-out;
 }
 
 .workDesc {
   font-size: 1rem;
   border-style: solid;
   border-radius: 1rem;
-  background-color: #6B6570;
-  border-color: #6B6570;
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: var(--bck-color);
+  border-color: var(--border-color);
+  white-space: pre-line;
 
+  transition: transform 0.25s ease-in-out;
+}
+
+.workCo:hover {
+  transform: scale(1.05);
+  color: #F9ADA0;
+}
+
+.workTools:hover {
+  transform: scale(1.05);
+  color: #F9ADA0;
+}
+
+.workDesc:hover {
+  transform: scale(1.05);
+  color: #F9ADA0;
 }
 
 .std-view {
@@ -135,15 +176,15 @@ html, body {
 }
 
 .btn {
-  color: #1A090D;
+  color: white;
 
   border-style: solid;
-  border-color: #58535c3c;
+  border-color: var(--border-color);
 
-  min-height: 80%;
+  min-height: 5vh;
   width:fit-content;
-  min-width: 3rem;
-  background-color: #6B6570;
+  min-width: 10vw;
+  background-color: var(--btn-color);
   font-size: 1rem;
   margin-right: 1%;
   border-radius: 1rem;
@@ -152,7 +193,7 @@ html, body {
 }
 
 .btn:hover {
-  background-color: #A8BA9A;
+  background-color: #769b4f;
   transform: scale(1.2);
   z-index: 1000;
 }
@@ -161,11 +202,12 @@ html, body {
   display: block;
   padding-left: 1rem;
   font-size: 18px;
-  background-color: #6B6570;
+  background-color: var(--banner-color);
   padding-bottom: 2rem;
   margin-bottom: 1rem;
 
-  width: 80%;
+  border-radius: 1rem;
+  width: 70vw;
   opacity: 0;
   height: 0;
   overflow: hidden;
@@ -180,7 +222,7 @@ html, body {
   padding: 1rem;
 
   border-style: solid;
-  border-color: #F9ADA0;
+  border-color: var(--border-color);
   border-width: 2px;
   border-radius: 20px;
 
@@ -191,7 +233,7 @@ html, body {
   justify-content: center;
   align-items: center;
 
-  background-color: #e2dbe9;
+  background-color: var(--accent-color);
 
   transition: transform 0.5s ease-in-out;
 }
@@ -218,7 +260,7 @@ html, body {
 }
 
 .card-p {
-  color: #af7e75;
+  color: var(--subtitle-color);
   font-size: 1.4rem;
 
   text-align: center;
@@ -249,7 +291,14 @@ p {
 
 .project-banner {
   display: flex;
-  
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 70vw;
+  color: white;
+  padding: 1rem;
+
+  border-radius: 1rem;
+  background-color: var(--banner-color);
 }
 
 .images {
@@ -267,8 +316,8 @@ p {
 }
 
 .imgNoBella {
-  width: 20rem;
-  height: 10rem;
+  width: 50vw;
+  height: 20vh;
   object-fit: cover;
 
   border-radius: 10px;
@@ -277,13 +326,17 @@ p {
 }
 
 .imgMamaKids {
-  width: 10rem;
-  height: 10rem;
+  width: 20vw;
+  height: 20vh;
   object-fit: cover;
 
   border-radius: 10px;
 
   margin-bottom: -2rem;
+}
+
+h3 {
+  color: var(--bck-color);
 }
 
 h4 {

@@ -62,8 +62,10 @@ function Projects() {
       <div className='project-banner'>
         <Button name="btn" sym="Cenote" onClick={() => goTo("github.com/stovetop-z/Cenote")} />
         <Button name="btn" sym="Tremor" onClick={() => goTo("github.com/stovetop-z/SensitivityAnalysis")} />
-        <Button name="btn" sym="Movie Recommender" onClick={() => goTo("github.com/stovetop-z/flindr")} />
-        <Button name="btn" sym="Deep Learning Course" onClick={() => goTo("github.com/stovetop-z/Deep-Learning")} />
+        <Button name="btn" sym="flindr" onClick={() => goTo("github.com/stovetop-z/flindr")} />
+        <Button name="btn" sym="ML Fundamentals" onClick={() => goTo("https://github.com/stovetop-z/Fundamentals-of-Machine-Learning")} />
+        <Button name="btn" sym="Backend CRUD API" onClick={() => goTo("https://github.com/stovetop-z/Backend-CRUD-API")}/>
+        <Button name="btn" sym="Deep Learning" onClick={() => goTo("github.com/stovetop-z/Deep-Learning")} />
       </div>
     </>
   );
@@ -119,6 +121,7 @@ function Experience() {
   return (
     <>
       <div className='skills-banner'>
+        <Work title="Research Assistant" company="BYU" date="Jan 2023 - Dec 2024" tools="MATLAB, C++" what={`\n- Optimized a tremor propagation model using numerical differentiation in MATLAB, reducing compute time by hours. \n - Utilized multivariable calculus to translate DOF acceleration to hand displacement. \n - Created complex visualizations and statistical analysis using matplotlib for presentations at Rocky Mountain Biomedical Engineering Summit (2023, 2024).`}/>
         <Work title="Data Analyst" company="BYU" date="Jan 2024 - Sept 2024" tools="Python, MATLAB (Matplotlib)" what="Applied statistical methods to identify seizure patterns in data" />
       </div>
     </>
@@ -195,7 +198,7 @@ function Work({title, company, date, tools, what}) {
       <h5 className='workTitle'>{title}</h5>
       <h6 className='workCo'>{company}, {date}</h6>
       <h6 className='workTools'>Tools: {tools}</h6>
-      <p className="workDesc">Description: {what}</p>
+      <p className="workDesc"><strong><u>Description</u></strong>: {what}</p>
     </div>
   );
 }
