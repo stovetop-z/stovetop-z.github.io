@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c26f2538.css",
-    "main.js": "/static/js/main.4f87dc5d.js",
+    "main.css": "/static/css/main.050dd2c9.css",
+    "main.js": "/static/js/main.b756dffa.js",
     "static/js/453.eaf3016b.chunk.js": "/static/js/453.eaf3016b.chunk.js",
     "static/media/mama_el_bel.jpg": "/static/media/mama_el_bel.b479a74d0d7b1ba6b9c2.jpg",
     "static/media/family_wo_isabella.jpg": "/static/media/family_wo_isabella.8199801435ab5df51a6d.jpg",
@@ -21,12 +21,12 @@
     "static/media/pytorch.svg": "/static/media/pytorch.e64d02bdfe5507b5c8ec2ea495753d36.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.b3faf728b139611af33ebcee76bbd23c.svg",
     "static/media/pandas.svg": "/static/media/pandas.26ff1c0502d192cd5b4766b6a13d643c.svg",
-    "main.c26f2538.css.map": "/static/css/main.c26f2538.css.map",
-    "main.4f87dc5d.js.map": "/static/js/main.4f87dc5d.js.map",
+    "main.050dd2c9.css.map": "/static/css/main.050dd2c9.css.map",
+    "main.b756dffa.js.map": "/static/js/main.b756dffa.js.map",
     "453.eaf3016b.chunk.js.map": "/static/js/453.eaf3016b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c26f2538.css",
-    "static/js/main.4f87dc5d.js"
+    "static/css/main.050dd2c9.css",
+    "static/js/main.b756dffa.js"
   ]
 }
