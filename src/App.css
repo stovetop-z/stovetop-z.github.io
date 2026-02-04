@@ -16,7 +16,7 @@ html, body {
 
 .page {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
@@ -122,7 +122,7 @@ html, body {
   border-radius: 1rem;
   background-color: #6B6570;
   border-color: #6B6570;
-  
+
 }
 
 .std-view {
@@ -165,6 +165,7 @@ html, body {
   padding-bottom: 2rem;
   margin-bottom: 1rem;
 
+  width: 80%;
   opacity: 0;
   height: 0;
   overflow: hidden;
