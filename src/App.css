@@ -19,6 +19,8 @@ colors:
 }
 
 html, body {
+  padding: 8rem;
+  padding-top:0;
   font-family: "Lucida Monospace";
   background-color: var(--bck-color);
   color: white;
