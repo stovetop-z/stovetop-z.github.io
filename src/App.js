@@ -44,9 +44,9 @@ function App() {
       <div className="std-view"> 
         <Card title="Steven Zinn" subtitle='Computer science masters student with experience in advanced machine learning projects' img={me} alt="Steven Zinn" img_class='me' />
         <Card title="Projects" subtitle='click to see my projects on github'/>
-        <Card title="Skills" subtitle='hover to see'/>
-        <Card title="Experience" subtitle='hover to see'/>
-        <Card title="Relevant Classes" subtitle="hover to see" />
+        <Card title="Skills" subtitle='hover to view'/>
+        <Card title="Experience" subtitle='hover to view'/>
+        <Card title="Relevant Classes" subtitle="hover to view" />
         <Card title="About Me" subtitle="" img={fam_wo_isabella} alt="Family" img_class='imgNoBella'/>
       </div>
       <footer>
@@ -63,8 +63,8 @@ function Projects() {
         <Button name="btn" sym="Cenote" onClick={() => goTo("github.com/stovetop-z/Cenote")} />
         <Button name="btn" sym="Tremor" onClick={() => goTo("github.com/stovetop-z/SensitivityAnalysis")} />
         <Button name="btn" sym="flindr" onClick={() => goTo("github.com/stovetop-z/flindr")} />
-        <Button name="btn" sym="ML Fundamentals" onClick={() => goTo("https://github.com/stovetop-z/Fundamentals-of-Machine-Learning")} />
-        <Button name="btn" sym="Backend CRUD API" onClick={() => goTo("https://github.com/stovetop-z/Backend-CRUD-API")}/>
+        <Button name="btn" sym="ML Fundamentals" onClick={() => goTo("github.com/stovetop-z/Fundamentals-of-Machine-Learning")} />
+        <Button name="btn" sym="Backend CRUD API" onClick={() => goTo("github.com/stovetop-z/Backend-CRUD-API")}/>
         <Button name="btn" sym="Deep Learning" onClick={() => goTo("github.com/stovetop-z/Deep-Learning")} />
       </div>
     </>
