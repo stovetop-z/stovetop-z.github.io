@@ -132,7 +132,7 @@ export default function App() {
           </div>
 
           <div className="filter-bar">
-            {["all", "systems", "machine-learning", "embedded"].map((category) => (
+            {["all", "systems", "machine-learning", "embedded", "software-configuration-management"].map((category) => (
               <button
                 key={category}
                 className={`filter-btn ${filter === category ? "active" : ""}`}
