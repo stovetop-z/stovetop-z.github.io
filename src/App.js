@@ -1,215 +1,218 @@
-import './App.css';
-import me from './me.jpg'
-import fam_wo_isabella from './family_wo_isabella.jpg'
-import mama_kids from './mama_el_bel.jpg'
-import py from './py.svg'
-import torch from './pytorch.svg'
-import cpp from './cplusplus.svg'
-import jsreact from './react.svg'
-import fapi from './fastapi.svg'
-import mysql from './mysql.svg'
-import ubuntu from './ubuntu.svg'
-import scipy from './scikitlearn.svg'
-import pd from './pandas.svg'
-import np from './numpy.svg'
-import plt from './Matplotlib.svg'
-import java from './java.svg'
-import lua from './lua.svg'
-import matlab from './matlab.svg'
+import React, { useState } from "react";
+import "./App.css";
 
-import {useState} from 'react';
+const PROJECTS = [
+  {
+    id: "dark-patterns",
+    title: "Dark Pattern Detector",
+    category: "machine-learning",
+    desc: "Transformer-based sequence classification model fine-tuned on web UI copy to automatically detect manipulative conversion patterns and misleading deceptive design.",
+    tech: ["PyTorch", "Hugging Face", "Python", "BERT"],
+    github: "https://github.com/stovetop-z",
+  },
+  {
+    id: "flight-dynamics",
+    title: "Aerospace Flight Dynamics Sim",
+    category: "systems",
+    desc: "Real-time 6DoF flight dynamics executive simulator written in modern C++ utilizing quaternion rotations and Runge-Kutta numerical integration.",
+    tech: ["C++20", "Linear Algebra", "Physics Simulation"],
+    github: "https://github.com/stovetop-z",
+  },
+  {
+    id: "home-media-engine",
+    title: "Full-Stack Media Engine",
+    category: "systems",
+    desc: "Lightweight, self-hosted media and gallery streaming platform featuring a low-latency Go REST service, MySQL relations, and a Vite-React interface.",
+    tech: ["Go", "MySQL", "React", "Docker", "Tailscale"],
+    github: "https://github.com/stovetop-z",
+  },
+  {
+    id: "ml-from-scratch",
+    title: "ML Algorithms From Scratch",
+    category: "machine-learning",
+    desc: "Modular open-source implementation of fundamental statistical learning algorithms, matrix factorizations, optimizers, and neural primitives using NumPy.",
+    tech: ["Python", "NumPy", "Linear Algebra", "Optimization"],
+    github: "https://github.com/stovetop-z",
+  },
+  {
+    id: "cubesat-radio",
+    title: "CubeSat Hamming Radio Pipeline",
+    category: "embedded",
+    desc: "Embedded telemetry encoding and packet validation firmware engineered in C for low Earth orbit nanosatellite communications payload.",
+    tech: ["C", "Embedded Systems", "Packet Radio", "Hamming Code"],
+    github: "https://github.com/stovetop-z",
+  },
+  {
+    id: "svm-biomechanics",
+    title: "Clinical Biomechanics Classifier",
+    category: "machine-learning",
+    desc: "Hyperparameter-tuned Support Vector Machine classifier analyzing lumbar and thoracic geometry metrics for spinal condition prognosis.",
+    tech: ["Python", "scikit-learn", "Pandas", "Matplotlib"],
+    github: "https://github.com/stovetop-z",
+  },
+];
 
-function goTo(str) {
-  if (str.includes("github")) {
-    window.open(`https://${str}`, '_blank');
-  } else {
-    window.location.href = `#${str}`;
-  }
-}
+export default function App() {
+  const [filter, setFilter] = useState("all");
 
-function App() {
-
-  const [view, setView] = useState("Home");
+  const filteredProjects =
+    filter === "all"
+      ? PROJECTS
+      : PROJECTS.filter((p) => p.category === filter);
 
   return (
-    <div className="page">
-      <div className="banner">
-        <Button name="btn" sym="⌂" onClick={() => goTo("Steven Zinn")} />
-        <Button name="btn" sym="Projects" onClick={() => goTo("Projects")} />
-        <Button name="btn" sym="Skills" onClick={() => goTo("Skills")} />
-        <Button name="btn" sym="Experience" onClick={() => goTo("Experience")} />
-        <Button name="btn" sym="Classwork" onClick={() =>goTo("Relevant Classes")} />
-        <Button name="btn" sym="About" onClick={() => goTo("About Me")} />
-      </div>
-      <div className="std-view"> 
-        <Card title="Steven Zinn" subtitle='Computer science masters student with experience in advanced machine learning projects' img={me} alt="Steven Zinn" img_class='me' />
-        <Card title="Projects" subtitle='click to see my projects on github'/>
-        <Card title="Skills" subtitle='hover to view'/>
-        <Card title="Experience" subtitle='hover to view'/>
-        <Card title="Relevant Classes" subtitle="hover to view" />
-        <Card title="About Me" subtitle="" img={fam_wo_isabella} alt="Family" img_class='imgNoBella'/>
-      </div>
-      <footer>
-        steven zinn's portfolio website
-      </footer>
-    </ div>
-  );
-}
+    <div>
+      <div className="bg-grid" />
+      <div className="portfolio-container">
+        {/* Navigation Bar */}
+        <header className="navbar">
+          <div className="nav-brand">~/steven-w-zinn</div>
+          <nav className="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="https://github.com/stovetop-z" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </nav>
+        </header>
 
-function Projects() {
-  return (
-    <>
-      <div className='project-banner'>
-        <Button name="btn" sym="Cenote" onClick={() => goTo("github.com/stovetop-z/Cenote")} />
-        <Button name="btn" sym="Tremor" onClick={() => goTo("github.com/stovetop-z/SensitivityAnalysis")} />
-        <Button name="btn" sym="flindr" onClick={() => goTo("github.com/stovetop-z/flindr")} />
-        <Button name="btn" sym="ML Fundamentals" onClick={() => goTo("github.com/stovetop-z/Fundamentals-of-Machine-Learning")} />
-        <Button name="btn" sym="Backend CRUD API" onClick={() => goTo("github.com/stovetop-z/Backend-CRUD-API")}/>
-        <Button name="btn" sym="Deep Learning" onClick={() => goTo("github.com/stovetop-z/Deep-Learning")} />
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="terminal-badge">
+            <span className="pulse-dot" />
+            <span>Systems • Machine Learning • Computation</span>
+          </div>
+          <h1 className="hero-title">
+            Engineering software at the boundary of{" "}
+            <span className="gradient-text">computation and physics</span>.
+          </h1>
+          <p className="hero-description">
+            Hi, I'm Steven. Master's in Computer Science student with a foundation
+            in neuroscience and electrical engineering. Focused on high-performance
+            systems, applied machine learning, and physical simulations.
+          </p>
+          <div className="hero-cta-group">
+            <a href="#projects" className="btn-primary">
+              View Work ↓
+            </a>
+            <a
+              href="https://github.com/stovetop-z"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary"
+            >
+              GitHub Profile ↗
+            </a>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="section">
+          <div className="section-header">
+            <h2 className="section-title">Featured Engineering</h2>
+            <p className="section-subtitle">
+              Selected builds across systems development, scientific modeling, and ML.
+            </p>
+          </div>
+
+          <div className="filter-bar">
+            {["all", "systems", "machine-learning", "embedded"].map((category) => (
+              <button
+                key={category}
+                className={`filter-btn ${filter === category ? "active" : ""}`}
+                onClick={() => setFilter(category)}
+              >
+                {category === "all"
+                  ? "All Projects"
+                  : category.replace("-", " ").toUpperCase()}
+              </button>
+            ))}
+          </div>
+
+          <div className="projects-grid">
+            {filteredProjects.map((project) => (
+              <div key={project.id} className="project-card">
+                <div className="project-top">
+                  <div className="project-category">{project.category}</div>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-desc">{project.desc}</p>
+                </div>
+                <div>
+                  <div className="project-tech">
+                    {project.tech.map((item) => (
+                      <span key={item} className="tech-tag">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="project-links">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project-link"
+                    >
+                      Inspect Source ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Technical Stack Matrix */}
+        <section id="skills" className="section">
+          <div className="section-header">
+            <h2 className="section-title">Technical Capabilities</h2>
+            <p className="section-subtitle">
+              Tools and languages used in production pipelines and systems.
+            </p>
+          </div>
+
+          <div className="skills-grid">
+            <div className="skill-card">
+              <h3 className="skill-card-title">// Core Languages</h3>
+              <ul className="skill-list">
+                <li className="skill-item">C++ (C++17 / C++20)</li>
+                <li className="skill-item">Python</li>
+                <li className="skill-item">Go</li>
+                <li className="skill-item">C</li>
+                <li className="skill-item">Lua</li>
+                <li className="skill-item">SQL / JavaScript</li>
+              </ul>
+            </div>
+
+            <div className="skill-card">
+              <h3 className="skill-card-title">// Machine Learning & Math</h3>
+              <ul className="skill-list">
+                <li className="skill-item">PyTorch & Torch Geometric</li>
+                <li className="skill-item">TensorFlow</li>
+                <li className="skill-item">OpenCV & Computer Vision</li>
+                <li className="skill-item">scikit-learn & SciPy</li>
+                <li className="skill-item">Quaternion Rotations & Numerical Solvers</li>
+              </ul>
+            </div>
+
+            <div className="skill-card">
+              <h3 className="skill-card-title">// Architecture & Infra</h3>
+              <ul className="skill-list">
+                <li className="skill-item">FastAPI / Flask / Go REST</li>
+                <li className="skill-item">React & Vite</li>
+                <li className="skill-item">Docker & Microservices</li>
+                <li className="skill-item">Tailscale & Cloudflare Tunnels</li>
+                <li className="skill-item">Neovim (Lua configs)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="footer">
+          <div>Built with React & Clean CSS • Hosted on GitHub Pages</div>
+          <div>© {new Date().getFullYear()} Steven Weller Zinn</div>
+        </footer>
       </div>
-    </>
-  );
-}
-
-function Skills() {
-  return (
-    <>
-      <div className='skills-banner'>
-        <h5>Frameworks and Languages</h5>
-        <div className='languages'>
-          <Language title="python" sym={py} />
-          <Language title="FastAPI" sym={fapi} />
-          <Language title="PyTorch" sym={torch} />
-          <Language title="SciPy" sym={scipy} />
-          <Language title="Matplotlib" sym={plt} />
-          <Language title="Pandas" sym={pd} />
-          <Language title="NumPy" sym={np} />
-          <Language title="MySQL" sym={mysql} />
-          <Language title="React" sym={jsreact} />
-          <Language title="Java" sym={java} />
-          <Language title="C++" sym={cpp} />
-          <Language title="Lua" sym={lua} />
-          <Language title="MATLAB" sym={matlab} />
-          <Language title="Ubuntu" sym={ubuntu} />
-        </div>
-        <h5>Technical Knowledge</h5>
-        <div className='techList'>
-          <ul className='techKnowledgeList'>
-            <li>Supervised Learning: Linear/Logistic Regression, Decision Trees, Random Forests, SVM</li>
-            <li>Unsupervised Learning: KMM, PCA, Anomaly Detection</li>
-            <li>Deep Learning: CNNs, RNNs, learning now (Transformers, Attention Mechanisms)</li>
-            <li>Evaluation Metrics</li>
-            <li>Version Control: Git/GitHub</li>
-          </ul>
-        </div>
-      </div>
-
-    </>
-  );
-}
-
-function Classes() {
-  return (
-    <>
-    <div className='skills-banner'>
     </div>
-    </>
   );
 }
-
-function Experience() {
-  return (
-    <>
-      <div className='skills-banner'>
-        <Work title="Research Assistant" company="BYU" date="Jan 2023 - Dec 2024" tools="MATLAB, C++" what={`\n- Optimized a tremor propagation model using numerical differentiation in MATLAB, reducing compute time by hours. \n - Utilized multivariable calculus to translate DOF acceleration to hand displacement. \n - Created complex visualizations and statistical analysis using matplotlib for presentations at Rocky Mountain Biomedical Engineering Summit (2023, 2024).`}/>
-        <Work title="Data Analyst" company="BYU" date="Jan 2024 - Sept 2024" tools="Python, MATLAB (Matplotlib)" what="Applied statistical methods to identify seizure patterns in data" />
-      </div>
-    </>
-  );
-}
-
-function About() {
-  return (
-    <>
-    <div className='page-content'>
-        <h4>An Autobiography</h4>
-        <p>
-          I grew up primarily in beautiful San Jose, California with a short stint in Houston, Texas. 
-          An avid, eternal learner, I have always sought out experiences and pursued various projects in my youth. 
-          Some most enjoyable:
-        </p>
-        <ul>
-          <li>First Lego League (<strong>FLL</strong>) Lego Robotics Competition: where my team made it through qualifiers in 2010.</li>
-          <li>Pong inspired computer game, written fully in C++ using SDL libraries (I wish I knew about github at this point).</li>
-          <li>Arduino Uno box robot that navigated its space using an ultrasonic sensor and a a triwheel design.</li>
-        </ul>
-        <p>
-          For my undergraduate I chose Neuroscience, but still decided to tack on mathematics from Calc I to Calc III and Linear Algebra 
-          to get a strong foundation for research. I worked for a couple of years with a professor (Steven Charles, PhD) in mechanical engineering 
-          to develop a sensitivity analysis of parameters in newly developed tremor propagation model. This model was derived from a previous MS student 
-          of his, but the model ended at degree of freedom translation (of which there are 7 on each side of the upper body). Not only this, but his code 
-          took days to run because it used symbolic differentiation. 
-        </p>
-        <p>
-          Together, we developed a Jacobian (with the help of MATLAB) to multiply into the model to get end effector (hand) instantaneous movement. 
-          Additionally, I revised the code to use numerical differentiation to determine the parameters that were most sensitive in the model instead 
-          of symbolic to cut the time for the code to run from days to minutes.
-        </p>
-        <p>
-          I now happily study computer science as a masters students, emphasizing in machine learning, to meld my two passions of the theory of learning 
-          and computer science. My life is filled with little giggles from my two young daughters and a wife who has loved and supported me (and vice-a-versa) 
-          since 2021. 
-        </p>
-      </div>
-    </>
-  );
-}
-
-function Card({title, subtitle = "None", img = "None", alt = "None", img_class = "None"}) {
-  return (
-    <>
-      <div className="card" id={title}>
-        <div className="images">
-          {img != "None" && <img src={img} alt={alt} className={img_class} />}
-          {alt == "Family" && <img src={mama_kids} alt="Mama and kids" className='imgMamaKids' />}
-        </div>
-        <h3 className='card-title'>{title}</h3>
-        <p className="card-p">
-          {subtitle}
-        </p>
-
-        {title == "Projects" && <Projects />}
-        {title == "Skills" && <Skills />}
-        {title == "Relevant Classes" && <Classes />}
-        {title == "Experience" && <Experience />}
-        {title == "About Me" && <About />}
-      </div>
-    </>
-  );
-}
-
-function Button({name, sym, onClick}) {
-  return <button className={name} onClick={onClick}>{sym}</button>;
-}
-
-function Work({title, company, date, tools, what}) {
-  return (
-    <div className='workCard'>
-      <h5 className='workTitle'>{title}</h5>
-      <h6 className='workCo'>{company}, {date}</h6>
-      <h6 className='workTools'>Tools: {tools}</h6>
-      <p className="workDesc"><strong><u>Description</u></strong>: {what}</p>
-    </div>
-  );
-}
-
-function Language({title, sym}) {
-  return (
-    <button className="language">
-      <img className="imgLang" src={sym} alt={title}></img>
-      <h6>{title}</h6>
-    </button>
-  );
-}
-
-export default App;
