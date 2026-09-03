@@ -3,11 +3,11 @@ import "./App.css";
 
 const PROJECTS = [
   {
-    id: "dark-patterns",
-    title: "Dark Pattern Detector",
-    category: "machine-learning",
-    desc: "Transformer-based sequence classification model fine-tuned on web UI copy to automatically detect manipulative conversion patterns and misleading deceptive design.",
-    tech: ["PyTorch", "Hugging Face", "Python", "BERT"],
+    id: "shi",
+    title: "Version Control System - Shi",
+    category: "software-configuration-management",
+    desc: "A simple version control system implemented in C++.",
+    tech: ["C++", "Git", "CMake", "SSH"],
     github: "https://github.com/stovetop-z",
   },
   {
@@ -23,7 +23,7 @@ const PROJECTS = [
     title: "Full-Stack Media Engine",
     category: "systems",
     desc: "Lightweight, self-hosted media and gallery streaming platform featuring a low-latency Go REST service, MySQL relations, and a Vite-React interface.",
-    tech: ["Go", "MySQL", "React", "Docker", "Tailscale"],
+    tech: ["Go", "MySQL", "React"],
     github: "https://github.com/stovetop-z",
   },
   {
@@ -35,6 +35,14 @@ const PROJECTS = [
     github: "https://github.com/stovetop-z",
   },
   {
+    id: "movie-recommendation-system",
+    title: "Flindr - Movie Recommendation System",
+    category: "machine-learning",
+    desc: "A recommendation system for suggesting movies based on user preferences.",
+    tech: ["Lua", "Python", "scikit-learn", "TCP/IP", "HTTP"],
+    github: "https://github.com/stovetop-z",
+  },
+  {
     id: "cubesat-radio",
     title: "CubeSat Hamming Radio Pipeline",
     category: "embedded",
@@ -43,11 +51,11 @@ const PROJECTS = [
     github: "https://github.com/stovetop-z",
   },
   {
-    id: "svm-biomechanics",
-    title: "Clinical Biomechanics Classifier",
+    id: "sensitivity-analysis",
+    title: "Sensitivity Analysis for Essential Tremor Model Parameters",
     category: "machine-learning",
-    desc: "Hyperparameter-tuned Support Vector Machine classifier analyzing lumbar and thoracic geometry metrics for spinal condition prognosis.",
-    tech: ["Python", "scikit-learn", "Pandas", "Matplotlib"],
+    desc: "Sensitivity analysis of model parameters for essential tremor prediction.",
+    tech: ["MATLAB", "Robotics ToolKit", "Simulink", "Matplotlib"],
     github: "https://github.com/stovetop-z",
   },
 ];
@@ -80,11 +88,11 @@ export default function App() {
         <section className="hero-section">
           <div className="terminal-badge">
             <span className="pulse-dot" />
-            <span>Systems • Machine Learning • Computation</span>
+            <span>Systems • Machine Learning • Computation • Biomechanics</span>
           </div>
           <h1 className="hero-title">
-            Engineering software at the boundary of{" "}
-            <span className="gradient-text">computation and physics</span>.
+            Where computer science and biomechanics meet to{" "}
+            <span className="gradient-text">solve complex problems</span>.
           </h1>
           <p className="hero-description">
             Hi, I'm Steven. Master's in Computer Science student with a foundation
