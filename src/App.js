@@ -8,7 +8,7 @@ const PROJECTS = [
     category: "software-configuration-management",
     desc: "A simple version control system implemented in C++.",
     tech: ["C++", "Git", "CMake", "SSH"],
-    github: "https://github.com/stovetop-z",
+    github: "https://github.com/stovetop-z/Shi",
   },
   {
     id: "flight-dynamics",
@@ -16,7 +16,15 @@ const PROJECTS = [
     category: "systems",
     desc: "Real-time 6DoF flight dynamics executive simulator written in modern C++ utilizing quaternion rotations and Runge-Kutta numerical integration.",
     tech: ["C++20", "Linear Algebra", "Physics Simulation"],
-    github: "https://github.com/stovetop-z",
+    github: "https://github.com/stovetop-z/Aircraft_Simulation",
+  },
+  {
+    id: "embedded-sql-db",
+    title: "Java-based Embedded SQL Database for PizzaCo",
+    category: "software-configuration-management",
+    desc: "A lightweight, Java-based embedded SQL database for a mock company called PizzaCo that supports basic CRUD operations.",
+    tech: ["Java", "SQL", "JDBC", "MySQL"],
+    github: "https://github.com/stovetop-z/PizzaDB---CPSC-6620",
   },
   {
     id: "home-media-engine",
@@ -24,15 +32,15 @@ const PROJECTS = [
     category: "systems",
     desc: "Lightweight, self-hosted media and gallery streaming platform featuring a low-latency Go REST service, MySQL relations, and a Vite-React interface.",
     tech: ["Go", "MySQL", "React"],
-    github: "https://github.com/stovetop-z",
+    github: "https://github.com/stovetop-z/Backend-CRUD-API",
   },
   {
-    id: "ml-from-scratch",
-    title: "ML Algorithms From Scratch",
+    id: "deep-learning-from-scratch",
+    title: "Deep Learning Projects",
     category: "machine-learning",
-    desc: "Modular open-source implementation of fundamental statistical learning algorithms, matrix factorizations, optimizers, and neural primitives using NumPy.",
-    tech: ["Python", "NumPy", "Linear Algebra", "Optimization"],
-    github: "https://github.com/stovetop-z",
+    desc: "In PyTorch, built from scratch deep learning models: linear classifiers, MLPs for image classification, CNNs for object detection and image segmentation.",
+    tech: ["Python", "PyTorch", "torchvision", "NumPy", "Matplotlib"],
+    github: "https://github.com/stovetop-z/Deep-Learning",
   },
   {
     id: "movie-recommendation-system",
@@ -40,7 +48,7 @@ const PROJECTS = [
     category: "machine-learning",
     desc: "A recommendation system for suggesting movies based on user preferences.",
     tech: ["Lua", "Python", "scikit-learn", "TCP/IP", "HTTP"],
-    github: "https://github.com/stovetop-z",
+    github: "https://github.com/stovetop-z/flindr",
   },
   {
     id: "cubesat-radio",
@@ -48,7 +56,7 @@ const PROJECTS = [
     category: "embedded",
     desc: "Embedded telemetry encoding and packet validation firmware engineered in C for low Earth orbit nanosatellite communications payload.",
     tech: ["C", "Embedded Systems", "Packet Radio", "Hamming Code"],
-    github: "https://github.com/stovetop-z",
+    github: "https://github.com/stovetop-z/BYU-Cubesat",
   },
   {
     id: "sensitivity-analysis",
@@ -56,7 +64,7 @@ const PROJECTS = [
     category: "machine-learning",
     desc: "Sensitivity analysis of model parameters for essential tremor prediction.",
     tech: ["MATLAB", "Robotics ToolKit", "Simulink", "Matplotlib"],
-    github: "https://github.com/stovetop-z",
+    github: "https://github.com/stovetop-z/SensitivityAnalysis",
   },
 ];
 
@@ -182,9 +190,10 @@ export default function App() {
             <div className="skill-card">
               <h3 className="skill-card-title">// Core Languages</h3>
               <ul className="skill-list">
-                <li className="skill-item">C++ (C++17 / C++20)</li>
+                <li className="skill-item">C++</li>
                 <li className="skill-item">Python</li>
                 <li className="skill-item">Go</li>
+                <li className="skill-item">Java</li>
                 <li className="skill-item">C</li>
                 <li className="skill-item">Lua</li>
                 <li className="skill-item">SQL / JavaScript</li>
@@ -194,7 +203,7 @@ export default function App() {
             <div className="skill-card">
               <h3 className="skill-card-title">// Machine Learning & Math</h3>
               <ul className="skill-list">
-                <li className="skill-item">PyTorch & Torch Geometric</li>
+                <li className="skill-item">PyTorch, Torch Vision, Torch Geometric</li>
                 <li className="skill-item">TensorFlow</li>
                 <li className="skill-item">OpenCV & Computer Vision</li>
                 <li className="skill-item">scikit-learn & SciPy</li>
@@ -207,7 +216,7 @@ export default function App() {
               <ul className="skill-list">
                 <li className="skill-item">FastAPI / Flask / Go REST</li>
                 <li className="skill-item">React & Vite</li>
-                <li className="skill-item">Docker & Microservices</li>
+                <li className="skill-item">Git & Github</li>
                 <li className="skill-item">Tailscale & Cloudflare Tunnels</li>
                 <li className="skill-item">Neovim (Lua configs)</li>
               </ul>
