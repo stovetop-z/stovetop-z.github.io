@@ -112,12 +112,12 @@ export default function App() {
             <span>Systems • Machine Learning • Computation • Biomechanics</span>
           </div>
           <h1 className="hero-title">
-            Steven Zinn:{" "}
-            <span className="gradient-text">Computer Scientist</span>.
+            Using computer science to solve{" "}
+            <span className="gradient-text">real world problems</span>.
           </h1>
           <p className="hero-description">
-            Hi, I'm Steven. Master's in Computer Science student with a foundation
-            in neuroscience and electrical engineering. Focused on high-performance
+            I'm Steven Zinn. Master's in Computer Science student with a foundation
+            in neuroscience and electrical engineering. Primarily focused on high-performance
             systems, applied machine learning, and physical simulations.
           </p>
           <div className="hero-cta-group">
