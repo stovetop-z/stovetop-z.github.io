@@ -70,6 +70,7 @@ const PROJECTS = [
 
 export default function App() {
   const [filter, setFilter] = useState("all");
+  const [isLightMode, setIsLightMode] = useState(false);
 
   const filteredProjects =
     filter === "all"
@@ -77,12 +78,24 @@ export default function App() {
       : PROJECTS.filter((p) => p.category === filter);
 
   return (
-    <div>
+    <div className={isLightMode ? "app theme-light" : "app"}>
       <div className="bg-grid" />
       <div className="portfolio-container">
         {/* Navigation Bar */}
         <header className="navbar">
-          <div className="nav-brand">~/steven-w-zinn</div>
+          <div className="nav-left">
+            <button
+              className="theme-toggle"
+              type="button"
+              onClick={() => setIsLightMode((current) => !current)}
+              aria-label={isLightMode ? "Switch to dark mode" : "Switch to light mode"}
+              aria-pressed={isLightMode}
+            >
+              <span aria-hidden="true">{isLightMode ? "☾" : "☀"}</span>
+              <span>{isLightMode ? "Dark" : "Light"}</span>
+            </button>
+            <div className="nav-brand">~/steven-w-zinn</div>
+          </div>
           <nav className="nav-links">
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>

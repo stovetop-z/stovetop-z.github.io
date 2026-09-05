@@ -10,7 +10,31 @@
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --text-dim: #64748b;
+  --grid-line: rgba(255, 255, 255, 0.02);
+  --navbar-bg: rgba(10, 13, 20, 0.85);
+  --tag-bg: rgba(255, 255, 255, 0.04);
+  --tag-border: rgba(255, 255, 255, 0.04);
+  --shadow-card: rgba(0, 0, 0, 0.4);
   --font-mono: "Fira Code", "JetBrains Mono", monospace, monospace;
+}
+
+.theme-light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #eef2ff;
+  --bg-card: rgba(255, 255, 255, 0.82);
+  --border-color: rgba(15, 23, 42, 0.12);
+  --border-focus: rgba(79, 70, 229, 0.5);
+  --accent: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.2);
+  --accent-cyan: #0284c7;
+  --text-main: #172033;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  --grid-line: rgba(15, 23, 42, 0.06);
+  --navbar-bg: rgba(248, 250, 252, 0.88);
+  --tag-bg: rgba(15, 23, 42, 0.04);
+  --tag-border: rgba(15, 23, 42, 0.08);
+  --shadow-card: rgba(15, 23, 42, 0.12);
 }
 
 * {
@@ -28,6 +52,12 @@ body {
   overflow-x: hidden;
 }
 
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
 /* Background Grid Effect */
 .bg-grid {
   position: fixed;
@@ -37,10 +67,10 @@ body {
   height: 100vh;
   background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.02) 1px,
+      var(--grid-line) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: 0;
@@ -65,7 +95,35 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(10, 13, 20, 0.85);
+  background-color: var(--navbar-bg);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  padding: 7px 11px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--text-main);
+  border-color: var(--accent);
+  outline: none;
 }
 
 .nav-brand {
@@ -255,7 +313,7 @@ body {
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--border-focus);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 30px var(--shadow-card);
 }
 
 .project-top {
@@ -294,11 +352,11 @@ body {
 .tech-tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--tag-bg);
   color: var(--text-muted);
   padding: 4px 10px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--tag-border);
 }
 
 .project-links {
