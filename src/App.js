@@ -116,9 +116,7 @@ export default function App() {
             <span className="gradient-text">real world problems</span>.
           </h1>
           <p className="hero-description">
-            I'm Steven Zinn. Master's in Computer Science student with a foundation
-            in neuroscience and electrical engineering. Primarily focused on high-performance
-            systems, applied machine learning, and physical simulations.
+            With 2 years of software experience, I specialize in modeling and simulations. I am currently pursuing a Maseter's degree in Computer Science at Clemson University, where I focus on machine learning. Come see some school projects and personal builds that demonstrate my skills in systems development, scientific modeling, and machine learning.
           </p>
           <div className="hero-cta-group">
             <a href="#projects" className="btn-primary">
