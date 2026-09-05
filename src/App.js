@@ -112,8 +112,8 @@ export default function App() {
             <span>Systems • Machine Learning • Computation • Biomechanics</span>
           </div>
           <h1 className="hero-title">
-            Where computer science and biomechanics meet to{" "}
-            <span className="gradient-text">solve complex problems</span>.
+            Steven Zinn:{" "}
+            <span className="gradient-text">Computer Scientist</span>.
           </h1>
           <p className="hero-description">
             Hi, I'm Steven. Master's in Computer Science student with a foundation
