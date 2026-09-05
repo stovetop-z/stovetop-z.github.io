@@ -15,6 +15,7 @@
   --tag-bg: rgba(255, 255, 255, 0.04);
   --tag-border: rgba(255, 255, 255, 0.04);
   --shadow-card: rgba(0, 0, 0, 0.4);
+  --hero-gradient-start: #e5f0fa;
   --font-mono: "Fira Code", "JetBrains Mono", monospace, monospace;
 }
 
@@ -35,6 +36,7 @@
   --tag-bg: rgba(15, 23, 42, 0.04);
   --tag-border: rgba(15, 23, 42, 0.08);
   --shadow-card: rgba(15, 23, 42, 0.12);
+  --hero-gradient-start: #172033;
 }
 
 * {
@@ -187,7 +189,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #f1f5f9 30%, var(--accent-cyan) 100%);
+  background: linear-gradient(135deg, var(--hero-gradient-start) 30%, var(--accent-cyan) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
