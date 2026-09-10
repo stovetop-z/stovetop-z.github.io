@@ -3,6 +3,14 @@ import "./App.css";
 
 const PROJECTS = [
   {
+    id: "vector-df",
+    title: "Diffed - Lightweight Vector Database",
+    category: "software-configuration-management",
+    desc: "Diffed is a lightweight C++ vector database prototype. It stores fixed-size float vectors in memory, assigns them to simple search buckets, and returns nearby vectors using cosine similarity.",
+    tech: ["C++", "Git", "CMake", "SIMD"],
+    github: "https://github.com/stovetop-z/diffed",
+  },
+  {
     id: "shi",
     title: "Version Control System - Shi",
     category: "software-configuration-management",
